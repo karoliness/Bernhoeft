@@ -6,6 +6,11 @@
         {
             
         }
+
+        public AlteracaoCategoriaDto(Guid id, string nome, bool situacao) : base(id, nome, situacao)
+        {
+        }
+
         public static Categoria ConverterDto(AlteracaoCategoriaDto alteracaoCategoriaDto)
         {
             return new Categoria {

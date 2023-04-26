@@ -9,7 +9,9 @@ namespace GerenciamentoProduto.Domains.Validations
         {
             RuleFor(x => x.Id)
              .NotNull().WithMessage(MensagensErro.OCampoNaoDeveSerNulo)
-             .NotEmpty().WithMessage(MensagensErro.OCampoNaoDeveSerVazio);
+             .NotEmpty().WithMessage(MensagensErro.OCampoNaoDeveSerVazio)
+             .Must(x => x != Guid.Empty).WithMessage(MensagensErro.OCampoNaoDeveSerVazio);
+             
 
             RuleFor(x => x.CategoriaId)
              .NotNull().WithMessage(MensagensErro.OCampoNaoDeveSerNulo)

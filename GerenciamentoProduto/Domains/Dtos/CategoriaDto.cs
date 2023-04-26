@@ -12,6 +12,13 @@
             Situacao = situacao;
         }
 
+        public CategoriaDto(Guid id, string nome, bool situacao)
+        {
+            Id = id;
+            Nome = nome;
+            Situacao = situacao;
+        }
+
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public bool Situacao { get; set; }

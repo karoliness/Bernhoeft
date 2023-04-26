@@ -7,8 +7,17 @@
             
         }
 
-        public ProdutoDto(string nome, string descricao, decimal preco, bool situacao):
+        public ProdutoDto(string nome, string descricao, decimal preco, bool situacao)
         {
+            Nome = nome;
+            Descricao = descricao;
+            Preco = preco;
+            Situacao = situacao;
+        }
+
+        public ProdutoDto(Guid id, string nome, string descricao, decimal preco, bool situacao)
+        {
+            Id= id;
             Nome = nome;
             Descricao = descricao;
             Preco = preco;
