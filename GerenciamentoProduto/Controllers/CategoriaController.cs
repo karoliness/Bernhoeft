@@ -30,7 +30,7 @@ namespace GerenciamentoProduto.Controllers
                 return StatusCode(404, MensagensErro.NaoEncontrado);
 
             }
-            return StatusCode(202, BuscaCategoriaDto.ConverterCategoriasComProdutos(categorias));
+            return StatusCode(202, CategoriaComProdutoDto.ConverterCategoriasComProdutos(categorias));
         }
 
         [HttpGet("situacao/{situacao}")]
@@ -44,7 +44,7 @@ namespace GerenciamentoProduto.Controllers
 
             }
 
-            return StatusCode(202, BuscaCategoriaDto.ConverterCategoriasComProdutos(categorias));
+            return StatusCode(202, CategoriaComProdutoDto.ConverterCategoriasComProdutos(categorias));
         }
 
         [HttpGet("nome/{nome}")]
@@ -57,7 +57,7 @@ namespace GerenciamentoProduto.Controllers
                 return StatusCode(404, MensagensErro.NaoEncontrado);
 
             }
-            return StatusCode(202, BuscaCategoriaDto.ConverterCategoriasComProdutos(categorias));
+            return StatusCode(202, CategoriaComProdutoDto.ConverterCategoriasComProdutos(categorias));
         }
 
         [HttpPost("adicionar")]
@@ -94,7 +94,7 @@ namespace GerenciamentoProduto.Controllers
                 return StatusCode(404, MensagensErro.NaoAdicionado);
             }
 
-            return StatusCode(202, BuscaCategoriaDto.ConverterCategoriaComProdutos(categoria));
+            return StatusCode(202, CategoriaComProdutoDto.ConverterCategoriaComProdutos(categoria));
         }
 
         private List<string> ValidacaoModel<T>(T model, IValidator<T> validator) where T : class

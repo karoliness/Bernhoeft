@@ -1,13 +1,13 @@
 ﻿namespace GerenciamentoProduto.Domains.Dtos
 {
-    public class BuscaProdutoDto : ProdutoDto
+    public class ProdutoComCategoriaDto : ProdutoDto
     {
         public CategoriaDto Categoria { get; set; }
 
 
-        public static BuscaProdutoDto ConverterProdutoComCategoria(Produto produto)
+        public static ProdutoComCategoriaDto ConverterProdutoComCategoria(Produto produto)
         {
-            return new BuscaProdutoDto
+            return new ProdutoComCategoriaDto
             {
                 Id = produto.Id,
                 Descricao = produto.Descricao,
@@ -19,9 +19,9 @@
         }
 
 
-        public static List<BuscaProdutoDto> ConverterProdutosComCategoria(List<Produto> produtos)
+        public static List<ProdutoComCategoriaDto> ConverterProdutosComCategoria(List<Produto> produtos)
         { 
-            var buscarProdutosDto = new List<BuscaProdutoDto>();
+            var buscarProdutosDto = new List<ProdutoComCategoriaDto>();
 
             foreach (var produto in produtos)
             {

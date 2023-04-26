@@ -2,13 +2,13 @@
 
 namespace GerenciamentoProduto.Domains.Dtos
 {
-    public class BuscaCategoriaDto : CategoriaDto
+    public class CategoriaComProdutoDto : CategoriaDto
     {
         public List<ProdutoDto> Produtos { get; set; }
 
-        public static BuscaCategoriaDto ConverterCategoriaComProdutos(Categoria categoria)
+        public static CategoriaComProdutoDto ConverterCategoriaComProdutos(Categoria categoria)
         {
-            return new BuscaCategoriaDto
+            return new CategoriaComProdutoDto
             {
                 Produtos = ProdutoDto.ConverterProdutos(categoria.Produtos),
                 Id = categoria.Id,
@@ -17,13 +17,13 @@ namespace GerenciamentoProduto.Domains.Dtos
             };
         }
 
-        public static List<BuscaCategoriaDto> ConverterCategoriasComProdutos(List<Categoria> categorias)
+        public static List<CategoriaComProdutoDto> ConverterCategoriasComProdutos(List<Categoria> categorias)
         {
-            var buscaCategoriasDto = new List<BuscaCategoriaDto>();
+            var buscaCategoriasDto = new List<CategoriaComProdutoDto>();
 
             foreach (var categoria in categorias)
             {
-                buscaCategoriasDto.Add(BuscaCategoriaDto.ConverterCategoriaComProdutos(categoria));
+                buscaCategoriasDto.Add(CategoriaComProdutoDto.ConverterCategoriaComProdutos(categoria));
             }
             return buscaCategoriasDto;
         }

@@ -37,7 +37,7 @@ namespace GerenciamentoProduto.Controllers
 
             }
 
-            var buscarProdutoDto = BuscaProdutoDto.ConverterProdutosComCategoria(produtos);
+            var buscarProdutoDto = ProdutoComCategoriaDto.ConverterProdutosComCategoria(produtos);
             
             return StatusCode(202, buscarProdutoDto);
         }
@@ -52,7 +52,7 @@ namespace GerenciamentoProduto.Controllers
                 return StatusCode(404, MensagensErro.NaoEncontrado);
 
             }
-            var buscarProdutoDto = BuscaProdutoDto.ConverterProdutosComCategoria(produtos);
+            var buscarProdutoDto = ProdutoComCategoriaDto.ConverterProdutosComCategoria(produtos);
 
             return StatusCode(202, buscarProdutoDto);
         }
@@ -67,7 +67,7 @@ namespace GerenciamentoProduto.Controllers
                 return StatusCode(404, MensagensErro.NaoEncontrado);
 
             }
-            var buscarProdutoDto = BuscaProdutoDto.ConverterProdutosComCategoria(produtos);
+            var buscarProdutoDto = ProdutoComCategoriaDto.ConverterProdutosComCategoria(produtos);
 
             return StatusCode(202, buscarProdutoDto);
         }
@@ -106,7 +106,7 @@ namespace GerenciamentoProduto.Controllers
                 return StatusCode(404, MensagensErro.NaoAdicionado);
             }
 
-            var buscarProdutoDto = BuscaProdutoDto.ConverterProdutoComCategoria(produto);
+            var buscarProdutoDto = ProdutoComCategoriaDto.ConverterProdutoComCategoria(produto);
 
             return StatusCode(202, buscarProdutoDto);
         }
