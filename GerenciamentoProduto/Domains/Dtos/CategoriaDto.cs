@@ -2,9 +2,20 @@
 {
     public class CategoriaDto
     {
+        public CategoriaDto()
+        {
+            
+        }
+        public CategoriaDto(string nome, bool situacao)
+        {
+            Nome = nome;
+            Situacao = situacao;
+        }
+
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public bool Situacao { get; set; }
+
 
 
         public static CategoriaDto ConverterCategoria(Categoria categoria)

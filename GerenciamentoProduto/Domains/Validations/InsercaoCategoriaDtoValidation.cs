@@ -1,4 +1,5 @@
-﻿using GerenciamentoProduto.Domains.Dtos;
+﻿using FluentValidation;
+using GerenciamentoProduto.Domains.Dtos;
 
 namespace GerenciamentoProduto.Domains.Validations
 {

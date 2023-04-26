@@ -2,6 +2,19 @@
 {
     public class ProdutoDto
     {
+        public ProdutoDto()
+        {
+            
+        }
+
+        public ProdutoDto(string nome, string descricao, decimal preco, bool situacao):
+        {
+            Nome = nome;
+            Descricao = descricao;
+            Preco = preco;
+            Situacao = situacao;
+        }
+
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }

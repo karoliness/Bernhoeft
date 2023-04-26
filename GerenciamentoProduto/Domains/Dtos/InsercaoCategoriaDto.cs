@@ -3,6 +3,15 @@
     public class InsercaoCategoriaDto : CategoriaDto
     {
 
+        public InsercaoCategoriaDto()
+        {
+            
+        }
+
+        public InsercaoCategoriaDto(string nome, bool situacao) : base(nome, situacao)
+        {
+        }
+
         public static Categoria ConverterDto(InsercaoCategoriaDto insercaoCategoriaDto)
         {
             return new Categoria { 

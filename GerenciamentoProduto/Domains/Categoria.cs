@@ -4,6 +4,7 @@
     {
         public Categoria()
         {
+            
         }
 
         public Categoria(string nome, bool situacao)
@@ -12,7 +13,7 @@
             Situacao = situacao;
         }
 
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = new Guid();
         public string Nome { get; set; }
         public bool Situacao { get; set; }
         public List<Produto> Produtos { get; } = new();
